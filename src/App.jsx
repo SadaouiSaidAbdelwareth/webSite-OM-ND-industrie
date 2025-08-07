@@ -5,6 +5,7 @@ import { Presentations } from './sections/presentations'
 import { Services } from './sections/services'
 import { Products } from './sections/products'
 import { ContactUs } from './sections/contactUs'
+import Footer from './sections/footer'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <Services/>
     <Products/>
     <ContactUs/> 
+    <Footer/>
   </div>
       
   )

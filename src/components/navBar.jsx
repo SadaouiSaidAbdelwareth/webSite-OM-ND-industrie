@@ -45,11 +45,11 @@ export const NavBar = () => {
     
   return (  
     
-    <div ref={navBarRef}  className={`   z-20 top-0  h-[81px]     flex w-full max-w-screen-2xl justify-between items-center ${isScrolling ? ' sticky transform transition-all duration-500 rounded-3xl  top-0 shadow-2xl bg-white' : 'absolute'} `}>
-        <img src={logo} alt="logo" className=' size-30' /> 
+    <div ref={navBarRef}  className={`   z-20 top-0  h-[81px]     flex w-full max-w-screen-2xl justify-between items-center ${isScrolling ? ' sticky transform transition-all duration-500 rounded-3xl  top-0 shadow-2xl bg-[#9a9a9a]' : 'absolute'} `}>
+        <img src={logo} alt="logo" className=' size-22 ml-3.5' /> 
         <div className='lg:flex hidden w-auto space-x-18 mr-6'>     
         {menu.map((item, id) => (
-            <a key={id} href={`#${item}`} className=" relative pb-1 text-black before:absolute before:bottom-0 before:left-0 before:content-[''] before:w-0 before:h-[4px] before:bg-[#ef791eb1] before:transition-all before:duration-300 hover:before:w-full ">
+            <a key={id} href={`#${item}`} className=" relative pb-1 text-white before:absolute before:bottom-0 before:left-0 before:content-[''] before:w-0 before:h-[4px] before:bg-[#ef791eb1] before:transition-all before:duration-300 hover:before:w-full ">
                 {item}
             </a>
         ))}

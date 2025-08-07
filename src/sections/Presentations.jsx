@@ -10,10 +10,9 @@ export const Presentations = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
 
-  const fullText = `Fondée en 2024, SARL OM ND insuffle une nouvelle dimension à vos bâtiments grâce à son expertise en revêtements de façades.
-Nous transformons l'extérieur de vos projets neufs ou en rénovation en alliant esthétisme moderne et performance durable.
-Notre engagement : Proposer des solutions innovantes qui protègent, isolent et valorisent votre patrimoine, avec un résultat à la hauteur de vos ambitions.
-Chez SARL OM ND, chaque façade est une œuvre d'art, conçue pour durer et impressionner.`;
+  const fullText = `Sublimez vos façades, valorisez votre patrimoine
+Fondée en 2024, la SARL OMND Construction & Aménagement donne vie à vos projets en transformant l’apparence extérieure de vos bâtiments.
+Spécialistes du revêtement de façade, nous intervenons sur le neuf comme en rénovation, avec des solutions esthétiques, performantes et durables.`;
 
   const [displayedText, setDisplayedText] = useState("");
   const indexRef = useRef(0);
@@ -76,7 +75,7 @@ Chez SARL OM ND, chaque façade est une œuvre d'art, conçue pour durer et impr
         </h1>
       </div>
 
-      <div className="text-lg font-light text-gray-700 whitespace-pre-wrap leading-relaxed">
+      <div className="text-lg font-light  whitespace-pre-wrap leading-relaxed">
         {displayedText}
         <span className="inline-block w-[2px] h-[20px] bg-black animate-pulse ml-1 align-middle" />
       </div>

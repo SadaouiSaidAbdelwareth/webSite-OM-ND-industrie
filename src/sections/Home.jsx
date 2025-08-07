@@ -1,13 +1,14 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import  { useRef } from 'react'
-import HPLFAÇADE  from '../assets/HPLFAÇADE.png'
 import MurRideauVec  from '../assets/MurRideauVec.png'
 import aluminuim  from '../assets/aluminuim.png'
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import homepage1  from '../assets/homepage1.png'
 import homepage2  from '../assets/homepage2.png'
 import homepage3  from '../assets/homepage3.png'
+import bgPhoto  from '../assets/bgPhoto.webp'   
+
 import { TfiLayoutLineSolid } from "react-icons/tfi";
 
 
@@ -42,10 +43,11 @@ export const Home = () => {
 
   },[])
   return (
-    <div id='Acceuil' className=' py-[140px] lg: pl-20 relative  bg-[#ffffff] h-[600px] flex flex-col  space-y-5  '
-    style={{
+    <div id='Acceuil' className='  relative   h-[800px] flex flex-col  space-y-5  '
+    style={{  
       fontFamily:'var(--font-Barlow)' 
     }} >
+      <div className=' py-[140px] lg: ml-20'>
       <h1 ref={titleRef} className=' z-10 lg:text-[45px] md:text-[30px] text-3xl font-bold' style={{fontFamily:'var(--font-main)',color:'var(--color-primary)'}} >DÉFIEZ LE TEMPS, RÉNOVEZ VOS FAÇADES</h1>
       <h4 className=' z-10 text-xl font-meduim'  style={{fontFamily:'var(--font-Roboto)'}} >
       Un réseau national expert du ravalement de façade.
@@ -78,7 +80,8 @@ export const Home = () => {
       </div>
 
     </div>  
-      <img ref={imgRef1} src={HPLFAÇADE} alt="" className='   absolute bottom-0 right-0 lg:size-130 md:size-100 size-80 md:opacity-70 opacity-30' />
+    </div>
+      <img ref={imgRef1} src={bgPhoto} alt="" className=' -z-10   absolute w-full h-full  md:opacity-70 opacity-30' />
 
     </div>
   )

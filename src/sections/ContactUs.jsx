@@ -57,9 +57,9 @@ export const ContactUs = () => {
     <section
       id="Contact nous"
       ref={sectionRef}  
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-100 px-4 py-20"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b  px-4 py-20"
     >
-      <div className="w-full max-w-xl bg-white shadow-2xl rounded-2xl p-8 space-y-6">
+      <div className="w-full max-w-xl  shadow-2xl bg-white text-black rounded-2xl p-8 space-y-6">
         <h2 className="text-3xl font-bold text-center text-[#ef791e]">
           Contactez-nous
         </h2>

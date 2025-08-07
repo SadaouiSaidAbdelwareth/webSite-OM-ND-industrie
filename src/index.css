@@ -7,14 +7,14 @@
   --font-Barlow : 'Barlow',sans-serif;
   --font-Roboto : 'Roboto',sans-serif;
   --color-primary : #ef791e;
-  --color-secondary : #575756
+  --color-secondary : #575750
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.5; 
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+  background-color: #56564f; 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
