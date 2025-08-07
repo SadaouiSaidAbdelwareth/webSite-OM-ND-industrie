@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import { NavBar } from './components/navBar'
 import { Home } from './sections/Home'
-import { Presentations } from './sections/Presentationsresentations'
+import { Presentations } from './sections/presentations'
 import { Services } from './sections/Services'
 import { Products } from './sections/Products'
 import { ContactUs } from './sections/ContactUs'
@@ -15,7 +14,7 @@ function App() {
     <Home />
     <Presentations/>
     <Services/>
-    <Products/>
+    <Products/>   
     <ContactUs/> 
     <Footer/>
   </div>
