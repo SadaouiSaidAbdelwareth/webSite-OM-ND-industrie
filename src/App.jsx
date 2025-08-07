@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { NavBar } from './components/navBar'
 import { Home } from './sections/Home'
-import { Presentations } from './sections/presentations'
-import { Services } from './sections/services'
-import { Products } from './sections/products'
-import { ContactUs } from './sections/contactUs'
-import Footer from './sections/footer'
+import { Presentations } from './sections/Presentationsresentations'
+import { Services } from './sections/Services'
+import { Products } from './sections/Products'
+import { ContactUs } from './sections/ContactUs'
+import {Footer} from './sections/Footer'
 
 function App() {
 
