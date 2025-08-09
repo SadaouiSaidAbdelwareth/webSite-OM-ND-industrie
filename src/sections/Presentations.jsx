@@ -14,7 +14,7 @@ export const Presentations = () => {
 Fondée en 2024, la SARL OMND Construction & Aménagement donne vie à vos projets en transformant l’apparence extérieure de vos bâtiments.
 Spécialistes du revêtement de façade, nous intervenons sur le neuf comme en rénovation, avec des solutions esthétiques, performantes et durables.`;
 
-  const [displayedText, setDisplayedText] = useState("");
+  const [displayedText, setDisplayedText] = useState("");             
   const indexRef = useRef(0);
   const animationStarted = useRef(false);
 
@@ -56,7 +56,7 @@ Spécialistes du revêtement de façade, nous intervenons sur le neuf comme en r
     }
   };
 
-  return (
+  return (  
     <div
       id="Presentations"
       ref={sectionRef}  
