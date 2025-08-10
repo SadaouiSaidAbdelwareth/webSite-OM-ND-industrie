@@ -6,7 +6,7 @@ import { TfiLayoutLineSolid } from "react-icons/tfi";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const Presentations = () => {
+export const Presentation = () => { 
   const sectionRef = useRef(null);
   const textRef = useRef(null);
 
@@ -58,7 +58,7 @@ Spécialistes du revêtement de façade, nous intervenons sur le neuf comme en r
 
   return (  
     <div
-      id="Presentations"
+      id="Presentations"  
       ref={sectionRef}  
       className="py-[120px] lg:px-16 xl:px-24 px-5 flex flex-col justify-center space-y-12"
     >

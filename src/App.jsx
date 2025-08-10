@@ -1,10 +1,12 @@
 import { NavBar } from './components/navBar'
 import { Home } from './sections/Home'
-import { Presentations } from './sections/Presentations'
+import { Presentation } from './sections/Presentation'
 import { Services } from './sections/Services'
 import { Products } from './sections/Products'
-import { ContactUs } from './sections/ContactUs'
+import { ContactUs } from './sections/contactUs'
 import {Footer} from './sections/Footer'
+import Documents from './sections/documents'
+import { Partners } from './sections/Partners'
 
 function App() {
 
@@ -12,10 +14,12 @@ function App() {
   <div className=' w-full relative flex flex-col space-y-8  '>  
     <NavBar/>
     <Home />
-    <Presentations/>
+    <Presentation/>
     <Services/>
     <Products/>   
     <ContactUs/> 
+    <Documents/>
+    <Partners/>
     <Footer/>
   </div>
       
