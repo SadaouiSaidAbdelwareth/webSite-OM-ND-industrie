@@ -1,12 +1,12 @@
-import { NavBar } from './components/navBar'
-import { Home } from './sections/Home'
-import { Presentation } from './sections/Presentation'
-import { Services } from './sections/Services'
-import { Products } from './sections/Products'
-import { ContactUs } from './sections/contactUs'
-import {Footer} from './sections/Footer'
-import Documents from './sections/documents'
-import { Partners } from './sections/Partners'
+import { NavBar } from './components/navBar.jsx'
+import { Home } from './sections/Home.jsx'
+import { Presentation } from './sections/Presentation.jsx'
+import { Services } from './sections/Services.jsx'
+import { Products } from './sections/Products.jsx'
+import { ContactUs } from './sections/contactUs.jsx'
+import {Footer} from './sections/Footer.jsx'
+import Documents from './sections/documents.jsx'
+import { Partners } from './sections/Partners.jsx'
 
 function App() {
 
