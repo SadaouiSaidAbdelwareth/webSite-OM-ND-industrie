@@ -1,6 +1,6 @@
 import { NavBar } from './components/navBar.jsx'
 import { Home } from './sections/Home.jsx'
-import { Presentation } from './sections/dppdpd.jsx'
+import { Presentation } from './sections/Presentation.jsx'
 import { Services } from './sections/Services.jsx'
 import { Products } from './sections/Products.jsx'
 import { ContactUs } from './sections/Contact.jsx'
