@@ -1,6 +1,6 @@
 import { NavBar } from './components/navBar'
 import { Home } from './sections/Home'
-import { Presentation } from './sections/presentation'
+import { Presentation } from './sections/Presentation'
 import { Services } from './sections/Services'
 import { Products } from './sections/Products'
 import { ContactUs } from './sections/contactUs'
