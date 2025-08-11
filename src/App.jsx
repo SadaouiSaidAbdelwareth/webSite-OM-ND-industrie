@@ -5,7 +5,7 @@ import { Services } from './sections/Services.jsx'
 import { Products } from './sections/Products.jsx'
 import { ContactUs } from './sections/Contact.jsx'
 import {Footer} from './sections/Footer.jsx'
-import Documents from './sections/eee.jsx'
+import Documents from './sections/Document.jsx'
 import { Partners } from './sections/Partners.jsx'
 
 function App() {
