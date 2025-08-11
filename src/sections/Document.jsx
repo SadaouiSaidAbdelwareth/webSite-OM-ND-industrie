@@ -1,7 +1,7 @@
 import React from "react";
 import { Download } from "lucide-react";
 
-export default function Documents() {
+export  const  Documents=()=> {
   const documents = [
     {
       title: "Document 1",

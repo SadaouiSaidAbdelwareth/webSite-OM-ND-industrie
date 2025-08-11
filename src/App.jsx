@@ -14,7 +14,7 @@ function App() {
   <div className=' w-full relative flex flex-col space-y-8  '>  
     <NavBar/>   
     <Home />
-    <Presentation/>
+    <Presentation/> 
     <Services/>
     <Products/>   
     <ContactUs/> 
