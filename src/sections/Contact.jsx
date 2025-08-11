@@ -1,13 +1,9 @@
 import React, { useRef, useState } from "react";
-import { createClient } from "@supabase/supabase-js";
 import toast, { Toaster } from "react-hot-toast";
 import { FiLoader } from "react-icons/fi";
 import emailjs from "emailjs-com";
 
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);  
+
 
 export const ContactUs = () => {
   const sectionRef = useRef(null);
@@ -27,22 +23,8 @@ export const ContactUs = () => {
 
     setLoading(true);
 
-    try {
-      // 1️⃣ Save to Supabase
-      const { error: supabaseError } = await supabase
-        .from("contact_messages")
-        .insert([
-          {
-            full_name: fullName,
-            phone_number: Number(phone),
-            message: message,
-          },
-        ]);
-
-      if (supabaseError) {
-        toast.error("Erreur lors de l'envoi du message.");
-        return;
-      }
+    
+      
 
       // 2️⃣ Send email via EmailJS
       try {
@@ -64,16 +46,15 @@ export const ContactUs = () => {
         console.error("EmailJS error:", emailError);
         toast.error("Message enregistré mais échec de l'envoi d'email.");
       }
+      finally {
+        setLoading(false)
+      }
 
       // 3️⃣ Clear form
       setFullName("");
       setPhone("");
       setMessage("");
-    } catch (err) {
-      toast.error("Erreur de connexion au serveur.");
-    } finally {
-      setLoading(false);
-    }
+    
   };
 
   return (
