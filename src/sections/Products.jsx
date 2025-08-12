@@ -5,6 +5,7 @@ import CERAMICFAÇADE from '../assets/CERAMICFAÇADE.jpg'
 import CAPOTETSERRURE from '../assets/Capot-et-serrure.png'
 import GARDECORPS from '../assets/Garde-corps.png'
 import ALUMINIUM_MENUISERIE from '../assets/minuiserie-alliminiium.jpg'
+import MurRideauVec from '../assets/MurRideauVec.png'
 
 import { ScrollTrigger } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
@@ -39,7 +40,7 @@ export const Products = () => {
               <div className='  w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-7'>
               <ProductComponenet 
               imageUrl={HPLFACADE} 
-              title="HPLFAÇADE VENTILÉE EN HPL"
+              title="FAÇADE VENTILÉE EN HPL"
               description={
                 <>
                   <p>Avantages du HPL :</p>
@@ -71,12 +72,17 @@ export const Products = () => {
             />
             <ProductComponenet
             imageUrl={ALUMINIUM_MENUISERIE}
-            title="Menuiserie Aluminium : alliance de modernité et de performance"
+            title="Menuiserie Aluminium"
             description={`Découvrez l'élégance et la robustesse de nos solutions en menuiserie aluminium. Spécialisés dans la conception et l'installation de fenêtres, portes, vérandas et murs-rideaux, nous vous proposons des produits sur mesure alliant esthétisme et durabilité. L'aluminium, connu pour sa résistance et sa légèreté, offre des performances exceptionnelles en matière d'isolation thermique et acoustique, garantissant ainsi un confort optimal à votre intérieur.
             
           Grâce à nos profilés fins et à une large palette de finitions, l'aluminium s'adapte à tous les styles architecturaux, du plus classique au plus contemporain. Facile à entretenir et 100% recyclable, il représente un choix écologique et économique pour vos projets de construction ou de rénovation.
 
           Faites confiance à notre expertise pour transformer votre espace de vie avec des solutions innovantes et performantes.`}
+          />
+          <ProductComponenet
+            imageUrl={MurRideauVec}
+            title="Mur rideau VEC"
+            description={`Le rideau VEC, ou mur-rideau à vitrage extérieur collé, est un système de façade moderne et élégant. Il se distingue par l'absence de cadres extérieurs visibles, les panneaux de verre étant directement collés sur la structure porteuse. Cela confère à l'édifice une apparence lisse et uniforme, un effet "tout verre" très apprécié en architecture contemporaine.`}
           />
 
 
@@ -103,7 +109,7 @@ const ProductComponenet = ({ imageUrl, title, description }) => {
     >
       {/* Image */}
       <img src={imageUrl} alt='' className='w-full h-full object-cover' />
-      <h1 className='absolute left-1/2 bottom-1/3 transform -translate-x-1/2 text-3xl text-white font-extrabold text-center bg-black/60 px-4 py-2 rounded-xl backdrop-blur-sm shadow-md'>
+      <h1 className='absolute left-1/2 top-3 transform -translate-x-1/2 text-3xl text-white font-extrabold text-center bg-black/60 px-4 py-2 rounded-xl backdrop-blur-sm shadow-md'>
         {title}
       </h1>
       {/* Overlay */}

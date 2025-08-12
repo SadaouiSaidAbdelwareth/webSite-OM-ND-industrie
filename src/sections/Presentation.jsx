@@ -8,16 +8,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Presentation = () => { 
   const sectionRef = useRef(null);
-  const textRef = useRef(null);
 
-  const fullText = `Sublimez vos façades, valorisez votre patrimoine
-Fondée en 2024, la SARL OMND Construction & Aménagement donne vie à vos projets en transformant l’apparence extérieure de vos bâtiments.
-Spécialistes du revêtement de façade, nous intervenons sur le neuf comme en rénovation, avec des solutions esthétiques, performantes et durables.`;
+  const fullText = `La Sociétés OM ND construction et aménagement Une Success-Story faite d'Innovation et de Qualité
+Fondé en 2024 , Notre succès repose sur l'innovation et la qualité, des valeurs fondamentales inscrites au cœur de notre stratégie de développement de solutions globales.`;
 
   const [displayedText, setDisplayedText] = useState("");             
   const indexRef = useRef(0);
   const animationStarted = useRef(false);
 
+  // Animation du titre
   useGSAP(() => {
     gsap.from('.Presentationstitle', {
       x: -100,
@@ -43,16 +42,16 @@ Spécialistes du revêtement de façade, nous intervenons sur le neuf comme en r
       }
     });
 
-    return () => {
-      trigger.kill();
-    };
+    return () => trigger.kill();
   }, []);
 
-  const typeText = () => {
+    const typeText = () => {
     if (indexRef.current < fullText.length) {
-      setDisplayedText((prev) => prev + fullText[indexRef.current]);
+      // Utilisation de Array.from pour gérer correctement les caractères Unicode
+      const characters = Array.from(fullText);
+      setDisplayedText(characters.slice(0, indexRef.current + 1).join(''));
       indexRef.current += 1;
-      gsap.delayedCall(0.02, typeText); // vitesse ici
+      gsap.delayedCall(0.02, typeText);
     }
   };
 
@@ -75,7 +74,7 @@ Spécialistes du revêtement de façade, nous intervenons sur le neuf comme en r
         </h1>
       </div>
 
-      <div className="text-lg font-light  whitespace-pre-wrap leading-relaxed">
+      <div className="text-lg font-light whitespace-pre-wrap leading-relaxed">
         {displayedText}
         <span className="inline-block w-[2px] h-[20px] bg-black animate-pulse ml-1 align-middle" />
       </div>

@@ -12,8 +12,9 @@ import logo8 from "../assets/logo8.png";
 // Représentants internationaux
 import rep1 from "../assets/logo6.png";
 import rep2 from "../assets/logo7.png";
+import rep3 from "../assets/logo9.png";
 
-export const Partners = () => {
+export const Partners = () => { 
   const sliderRef = useRef(null);
   const partners = [logo1, logo2, logo3, logo4, logo5, logo8];
 
@@ -51,16 +52,16 @@ export const Partners = () => {
         </div>
       </div> 
 
-      {/* Nos représentants internationaux */}
+      {/* Nos représentants internationaux */}  
       <div className="w-full text-center">
         <h1 className="font-bold text-3xl text-[#ef791e] mb-6">
           Nos représentants internationaux
         </h1>
         <div className="flex flex-wrap justify-center gap-8">
-          {[rep1, rep2].map((rep, index) => (
+          {[rep1, rep2, rep3].map((rep, index) => (
             <div
               key={index}
-              className="max-w-xs w-full shadow-lg rounded-lg overflow-hidden bg-white"
+              className="max-w-xs w-full shadow-lg rounded-lg overflow-hidden bg-white hover:scale-110 transition-all duration-200"
             >
               <img
                 src={rep}

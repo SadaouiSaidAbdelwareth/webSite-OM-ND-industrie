@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 export const NavBar = () => {
     const [isMenuClicked,setIsMenuClicked] = useState(false)
-    const menu = ['Acceuil','Presentations','Services','Produits','Contact nous']
+    const menu = ['Acceuil','Presentations','Services','Produits','Contactez nous']
     const [isScrolling,setIsScrolling] = useState(false)
     useEffect(()=>{
         function handleClickOutside(event) {

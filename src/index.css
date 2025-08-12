@@ -6,6 +6,9 @@
   --font-main :'Poppins',sans-serif; 
   --font-Barlow : 'Barlow',sans-serif;
   --font-Roboto : 'Roboto',sans-serif;
+  --font-Pacifico : 'Pacifico',sans-serif;
+  --font-Satisfy : 'Satisfy',sans-serif;
+
   --color-primary : #ef791e;
   --color-secondary : #575750
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -2,8 +2,7 @@ import React, { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { FiLoader } from "react-icons/fi";
 import emailjs from "emailjs-com";
-
-
+import maps from '../assets/mapsAlgeria.png';
 
 export const ContactUs = () => {
   const sectionRef = useRef(null);
@@ -23,49 +22,52 @@ export const ContactUs = () => {
 
     setLoading(true);
 
-    
-      
+    try {
+      const result = await emailjs.send(
+        "service_6ewwwzw",
+        "template_42eiaar",
+        {
+          from_name: fullName,
+          phone_number: phone,
+          message: message,
+          email: "ls_sadaoui@esi.dz",
+        },
+        "EGKZmDyU2d4-c5ooo"
+      );
 
-      // 2️⃣ Send email via EmailJS
-      try {
-        const result = await emailjs.send(
-          "service_6ewwwzw", // Service ID
-          "template_42eiaar", // Template ID
-          {
-            from_name: fullName,
-            phone_number: phone,
-            message: message,
-            email: "ls_sadaoui@esi.dz", // user email if you collect it
-          },  
-          "EGKZmDyU2d4-c5ooo" // Public key 
-        );  
+      console.log("EmailJS result:", result.text);
+      toast.success("Message envoyé avec succès !");
+    } catch (emailError) {
+      console.error("EmailJS error:", emailError);
+      toast.error("Échec de l'envoi de l'email.");
+    } finally {
+      setLoading(false);
+    }
 
-        console.log("EmailJS result:", result.text);
-        toast.success("Message envoyé et email transmis avec succès !");
-      } catch (emailError) {
-        console.error("EmailJS error:", emailError);
-        toast.error("Message enregistré mais échec de l'envoi d'email.");
-      }
-      finally {
-        setLoading(false)
-      }
-
-      // 3️⃣ Clear form
-      setFullName("");
-      setPhone("");
-      setMessage("");
-    
+    setFullName("");
+    setPhone("");
+    setMessage("");
   };
 
   return (
     <section
       id="Contact nous"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b px-4 py-20"
+      className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden"
     >
+      {/* Image de fond carte Algérie */}
+      <img
+        src={maps}
+        alt="Carte Algérie"
+        className="absolute inset-0 w-full h-full object-cover  opacity-100" 
+      />
+      {/* Overlay sombre */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
+
       <Toaster position="top-right" reverseOrder={false} />
 
-      <div className="w-full max-w-xl shadow-2xl bg-white text-black rounded-2xl p-8 space-y-6">
+      {/* Formulaire */}
+      <div className="relative w-full max-w-xl shadow-2xl bg-white/95 backdrop-blur-md text-black rounded-2xl p-8 space-y-6 z-10">
         <h2 className="text-3xl font-bold text-center text-[#ef791e]">
           Contactez-nous
         </h2>

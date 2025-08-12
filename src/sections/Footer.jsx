@@ -23,7 +23,7 @@ export const Footer = () => {
             <div className="flex items-start gap-2">
               <FaMapMarkerAlt className="text-orange-500 mt-1" />
               <span>
-                Villa 133 Sidi Mbarek, route de Aïn Naadja, Birkhadem – Alger
+                Villa 113 Sidi Mbarek, route de Aïn Naadja, Birkhadem – Alger
               </span>
             </div>
             <div className="flex items-start gap-2">
