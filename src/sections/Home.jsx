@@ -55,19 +55,24 @@ export const Home = () => {
       {/* Section 3 images en bas */}
       <div className="absolute bottom-0 w-full bg-black/40 py-4">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
-          {[img1, img2, img3].map((src, i) => (
-            <div key={i} className="w-full sm:w-1/3 max-w-[350px]">
-              <img  
-                src={src}
-                alt={`image-${i}`}  
-                className="w-full h-[180px]  object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-              />
-            </div> 
-          ))}
-        </div>
+  {[img1, img2, img3].map((src, i) => (
+    <div 
+      key={i} 
+      className={`w-full sm:w-1/3 max-w-[350px] ${
+        i !== 2 ? 'hidden md:block' : ''
+      }`}
+    >
+      <img 
+        src={src} 
+        alt={`image-${i}`} 
+        className="w-full h-[180px] object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300" 
+      />
+    </div>  
+  ))}
+</div>         
       {/*   <h1 className=' text-5xl h-20 text-center pt-3'  style={{fontFamily:'var(--font-Satisfy)', color:'var(--color-primary)' }} >The Best for Interface</h1>     */}
       <div className=' w-full flex justify-center'>
-        <img src={slogan} className=' text-center h-30' alt="" />
+        <img src={slogan} className=' mt-2.5 text-center h-30' alt="" />
       </div>
       </div>
     </div>

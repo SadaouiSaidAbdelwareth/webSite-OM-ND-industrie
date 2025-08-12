@@ -32,7 +32,7 @@ export const Products = () => {
     }, []);  
 
   return (
-    <div ref={sectionRef} id='Produits'  className=' px-5 py-[120px] lg:px-16 xl:px-24   flex flex-col    space-y-12'>
+    <div ref={sectionRef} id='Produits'  className=' px-5 py-[120px] lg:px-16 xl:px-24   flex flex-col    space-y-15'>
               <div className=' Productstitle flex items-center space-x-3'>
                 <TfiLayoutLineSolid size={'30px'} color='#ef791e' />
                 <h1 className=' uppercase text-3xl font-bold' style={{color:'var(--color-primary)',fontFamily:'var(--font-Roboto)' }} >Nos Produits</h1>
@@ -102,16 +102,18 @@ const ProductComponenet = ({ imageUrl, title, description }) => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <div
+    <div className=' flex flex-col items-center  h- '>
+      <h1 className=' flex items-center justify-center w-full h-20  text-3xl text-white font-extrabold text-center bg-black/60 rounded-xl p-1 backdrop-blur-sm shadow-md'>
+        {title}
+      </h1> 
+    <div  
       className='relative w-full h-[400px] rounded-2xl shadow-2xl overflow-hidden  group'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Image */}
       <img src={imageUrl} alt='' className='w-full h-full object-cover' />
-      <h1 className='absolute left-1/2 top-3 transform -translate-x-1/2 text-3xl text-white font-extrabold text-center bg-black/60 px-4 py-2 rounded-xl backdrop-blur-sm shadow-md'>
-        {title}
-      </h1>
+      
       {/* Overlay */}
       <div  
         className={`    
@@ -124,6 +126,8 @@ const ProductComponenet = ({ imageUrl, title, description }) => {
         
         <p className=' text-sm mt-2'> <p className=' font-bold text-lg mb-2'>Description</p> {description}</p>
       </div>
+    </div>
+
     </div>
   )
 }
