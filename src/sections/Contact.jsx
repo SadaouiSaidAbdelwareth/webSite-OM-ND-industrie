@@ -10,7 +10,7 @@ export const ContactUs = () => {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,15 +24,15 @@ export const ContactUs = () => {
 
     try {
       const result = await emailjs.send(
-        "service_6ewwwzw",
-        "template_42eiaar",
+        "service_7lqbsbd",
+        "template_kq4xhm9",
         {
           from_name: fullName,
           phone_number: phone,
           message: message,
-          email: "ls_sadaoui@esi.dz",
+          email: "Om.nd@outlook.fr",
         },
-        "EGKZmDyU2d4-c5ooo"
+        "Jev5XiMOrFYG1ObNp" //public keys
       );
 
       console.log("EmailJS result:", result.text);
@@ -55,6 +55,7 @@ export const ContactUs = () => {
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden"
     >
+      div
       {/* Image de fond carte Algérie */}
       <img
         src={maps}
